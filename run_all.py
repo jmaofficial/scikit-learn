@@ -11,6 +11,7 @@ ANALYSIS_SCRIPTS = [
     "analyze_loc.py",
     "analyze_coupling.py",
     "analyze_complexity.py",
+    "couplingchange.py",
 ]
 
 VISUALIZATION_SCRIPTS = [
