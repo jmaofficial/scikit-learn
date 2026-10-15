@@ -1,0 +1,62 @@
+Component interoperability
+==========================
+
+scikit-learn version: 1.10.dev0
+Imported from: /home/jmaofficial/projects/bth/SWA/assignment2/scikit-learn/sklearn/__init__.py
+Git commit: d4507339e84a47fc4c6e789e844219f1d53d93d7
+
+Relevant instantiated components: 154
+Fully interface-compatible components: 153
+Overall compatibility: 99.35%
+
+Transformer-role compatibility:
+  Compatible: 73
+  Relevant transformers: 74
+  Coverage: 98.65%
+
+Predictive-estimator-role compatibility:
+  Compatible: 85
+  Relevant classifiers/regressors: 85
+  Coverage: 100.00%
+
+Skipped during instantiation/tag inspection: 25
+
+Interpretation:
+- Transformer role checks fit + transform, matching the interface needed for
+  intermediate Pipeline/ColumnTransformer-style composition.
+- Predictive estimator role checks fit + predict, matching a standard final
+  predictive step.
+- fit_transform is reported in the CSV but is not required, because fit +
+  transform is sufficient for the transformer role.
+
+Limitation:
+This is API-level interoperability. It does not prove that every pair of
+components is semantically compatible with every other pair or with every
+dataset shape/type.
+
+Skipped estimators:
+  - ClassifierChain: TypeError: ClassifierChain.__init__() missing 1 required positional argument: 'estimator'
+  - ColumnTransformer: TypeError: ColumnTransformer.__init__() missing 1 required positional argument: 'transformers'
+  - FeatureUnion: TypeError: FeatureUnion.__init__() missing 1 required positional argument: 'transformer_list'
+  - FixedThresholdClassifier: TypeError: FixedThresholdClassifier.__init__() missing 1 required positional argument: 'estimator'
+  - FrozenEstimator: TypeError: FrozenEstimator.__init__() missing 1 required positional argument: 'estimator'
+  - GridSearchCV: TypeError: GridSearchCV.__init__() missing 2 required positional arguments: 'estimator' and 'param_grid'
+  - MultiOutputClassifier: TypeError: MultiOutputClassifier.__init__() missing 1 required positional argument: 'estimator'
+  - MultiOutputRegressor: TypeError: MultiOutputRegressor.__init__() missing 1 required positional argument: 'estimator'
+  - OneVsOneClassifier: TypeError: OneVsOneClassifier.__init__() missing 1 required positional argument: 'estimator'
+  - OneVsRestClassifier: TypeError: OneVsRestClassifier.__init__() missing 1 required positional argument: 'estimator'
+  - OutputCodeClassifier: TypeError: OutputCodeClassifier.__init__() missing 1 required positional argument: 'estimator'
+  - Pipeline: TypeError: Pipeline.__init__() missing 1 required positional argument: 'steps'
+  - RFE: TypeError: RFE.__init__() missing 1 required positional argument: 'estimator'
+  - RFECV: TypeError: RFECV.__init__() missing 1 required positional argument: 'estimator'
+  - RandomizedSearchCV: TypeError: RandomizedSearchCV.__init__() missing 2 required positional arguments: 'estimator' and 'param_distributions'
+  - RegressorChain: TypeError: _BaseChain.__init__() missing 1 required positional argument: 'estimator'
+  - SelectFromModel: TypeError: SelectFromModel.__init__() missing 1 required positional argument: 'estimator'
+  - SelfTrainingClassifier: AttributeError: The following error was raised: The following error was raised: 'NoneType' object has no attribute '__sklearn_tags__'. It seems that there are no classes that implement `__sklearn_tags__` in the MRO and/or all classes in the MRO call `super().__sklearn_tags__()`. Make sure to inherit from `BaseEstimator` which implements `__sklearn_tags__` (or alternatively define `__sklearn_tags__` but we don't recommend this approach). Note that `BaseEstimator` needs to be on the right side of other Mixins in the inheritance order.. It seems that there are no classes that implement `__sklearn_tags__` in the MRO and/or all classes in the MRO call `super().__sklearn_tags__()`. Make sure to inherit from `BaseEstimator` which implements `__sklearn_tags__` (or alternatively define `__sklearn_tags__` but we don't recommend this approach). Note that `BaseEstimator` needs to be on the right side of other Mixins in the inheritance order.
+  - SequentialFeatureSelector: TypeError: SequentialFeatureSelector.__init__() missing 1 required positional argument: 'estimator'
+  - SparseCoder: TypeError: SparseCoder.__init__() missing 1 required positional argument: 'dictionary'
+  - StackingClassifier: TypeError: StackingClassifier.__init__() missing 1 required positional argument: 'estimators'
+  - StackingRegressor: TypeError: StackingRegressor.__init__() missing 1 required positional argument: 'estimators'
+  - TunedThresholdClassifierCV: TypeError: TunedThresholdClassifierCV.__init__() missing 1 required positional argument: 'estimator'
+  - VotingClassifier: TypeError: VotingClassifier.__init__() missing 1 required positional argument: 'estimators'
+  - VotingRegressor: TypeError: VotingRegressor.__init__() missing 1 required positional argument: 'estimators'

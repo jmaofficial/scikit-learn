@@ -12,6 +12,9 @@ ANALYSIS_SCRIPTS = [
     "analyze_coupling.py",
     "analyze_complexity.py",
     "couplingchange.py",
+    "measure_data_exchange_coverage.py",
+    "measure_external_library_spread.py",
+    "measure_component_interoperability.py"
 ]
 
 VISUALIZATION_SCRIPTS = [

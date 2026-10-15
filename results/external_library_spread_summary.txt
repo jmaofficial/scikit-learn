@@ -1,0 +1,22 @@
+External library spread
+=======================
+
+Repository: /home/jmaofficial/projects/bth/SWA/assignment2/scikit-learn
+Target libraries: pandas, polars
+Productive Python files examined: 355
+Files with at least one direct target-library import: 9
+File spread: 2.54%
+
+Files importing each library:
+  pandas: 9 files (2.54%)
+  polars: 1 files (0.28%)
+
+Touched files by top-level component:
+  utils: 6
+  datasets: 2
+  compose: 1
+
+Important:
+- This counts direct import statements only.
+- Integration hidden behind helper modules or abstraction libraries will not be counted.
+- A low spread can therefore mean either good localization or indirect integration.

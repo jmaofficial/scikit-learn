@@ -1,0 +1,10 @@
+file,top_level_component,matched_libraries
+sklearn/datasets/_arff_parser.py,datasets,pandas
+sklearn/datasets/_openml.py,datasets,pandas
+sklearn/utils/_missing.py,utils,pandas
+sklearn/utils/validation.py,utils,pandas
+sklearn/utils/_param_validation.py,utils,pandas
+sklearn/utils/estimator_checks.py,utils,"pandas,polars"
+sklearn/utils/_mask.py,utils,pandas
+sklearn/utils/_optional_dependencies.py,utils,pandas
+sklearn/compose/_column_transformer.py,compose,pandas
